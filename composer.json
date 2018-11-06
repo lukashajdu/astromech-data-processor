@@ -1,0 +1,15 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Astromech\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Astromech\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.4"
+  }
+}
