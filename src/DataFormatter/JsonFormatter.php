@@ -21,6 +21,6 @@ class JsonFormatter implements DataFormatterInterface
             return $data;
         }
 
-        throw new FormatterException('Unable to process data');
+        throw new FormatterException('Unable to process data.');
     }
 }

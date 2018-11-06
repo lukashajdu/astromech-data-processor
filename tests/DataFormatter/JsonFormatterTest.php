@@ -20,7 +20,7 @@ class JsonFormatterTest extends TestCase
     public function test_convertJson_throws_FormatterException_for_invalid_data()
     {
         $this->expectException(FormatterException::class);
-        $this->expectExceptionMessage('Unable to process data');
+        $this->expectExceptionMessage('Unable to process data.');
 
         (new JsonFormatter())->convertJson('Leia');
     }

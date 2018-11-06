@@ -19,7 +19,7 @@ class DroidspeakToGalacticConverter implements LanguageConverterInterface
     public function convertBinaryMessage(string $binaryMessage): string
     {
         if (!$this->isBinaryMessageValid($binaryMessage)) {
-            throw new ConverterException('Message has not correct Droidspeak format.');
+            throw new ConverterException('The message has not correct Droidspeak format.');
         }
 
         $convertedString = [];
@@ -35,8 +35,8 @@ class DroidspeakToGalacticConverter implements LanguageConverterInterface
     {
         $binaryMessage = str_replace([' ', "\n"], '', $binaryMessage);
         if (strlen($binaryMessage) % self::ASCII_CHAR_LENGTH !== 0) {
-            throw new ConverterException('Message data lost at transaction. '
-                . 'Droidspeak message contains invalid number of characters.');
+            throw new ConverterException('Message data lost at the transaction. '
+                . 'Droidspeak message contains an invalid number of characters.');
         }
 
         return trim(chunk_split($binaryMessage, self::ASCII_CHAR_LENGTH, ' '));

@@ -30,8 +30,8 @@ class DroidspeakToGalacticConverterTest extends TestCase
     public function test_formatBinaryMessage_throws_ConverterException_if_the_string_does_not_contain_correct_length()
     {
         $this->expectException(ConverterException::class);
-        $this->expectExceptionMessage('Message data lost at transaction. '
-            . 'Droidspeak message contains invalid number of characters.');
+        $this->expectExceptionMessage('Message data lost at the transaction. '
+            . 'Droidspeak message contains an invalid number of characters.');
 
         (new DroidspeakToGalacticConverter())->formatBinaryMessage('100');
     }
@@ -55,7 +55,7 @@ class DroidspeakToGalacticConverterTest extends TestCase
         $converter = new DroidspeakToGalacticConverter();
 
         $this->expectException(ConverterException::class);
-        $this->expectExceptionMessage('Message has not correct Droidspeak format.');
+        $this->expectExceptionMessage('The message has not correct Droidspeak format.');
 
         $converter->convertBinaryMessage('12345678');
     }

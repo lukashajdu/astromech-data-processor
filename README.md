@@ -1,7 +1,21 @@
 Astromech Data Processor (ADP)
 ===
 
-The ADP contains contains shell script to automate some tasks and simplify usage.
+## Installation
+
+1. Clone the APD repository
+    ```
+    $ git clone git@github.com:lukashajdu/astromech-data-processor.git
+    $ cd astromech-data-processor
+    ```
+1. Install the project
+    ```
+    ./bin/astromech.sh build
+    ```
+    The command will create a Docker image with all necessary dependencies.
+
+
+The ADP contains shell script to automate some tasks and simplify usage.
 Run the following script to get list of commands:
 
 ``` 
@@ -10,17 +24,6 @@ Usage: ./bin/astromech.sh build|help|phpunit|run-decoder|sh
 ```
 
 Please refer to `/tests` folder for the code usage.
-
-
-## Install
-
-To install the ADP run following command from the project root:
-
-```
-./bin/astromech.sh build
-```
-
-The command will create a Docker image with all necessary dependencies.
 
 
 ## Tests
